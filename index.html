@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="./asset/css/style.css">
+    <title>زائر سرا </title>
+</head>
+
+<body>
+    <header class="shadow">
+        <nav class="navbar navbar-expand-lg bg-white">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="./asset/images/logo.png" width="70px" alt="زائرسرا">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">خانه </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">لیست </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                محصولات
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">قالب 1</a></li>
+                                <li><a class="dropdown-item" href="#">قالب 2</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">قالب 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">درباره ما </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">تماس با ما </a>
+                        </li>
+                        <li class="nav-item mr-3">
+                            <a class="nav-link disabled">ورود و ثبت نام </a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Optional JavaScript; choose one of the two! -->
+    <main>
+        <div id="app">
+            <div class="header">
+                <div class="headerImage" :style="headerImage">
+
+                </div>
+            </div>
+            <div class="container">
+
+                <h1 class="h1 mt-5 fw-bold">{{ title }}</h1>
+                <p class="small">{{ address }}</p>
+                <hr>
+                <div class="about">
+                    <p class="parageaph" style="text-align: justify;">
+                        {{ body }}
+                    </p>
+                </div>
+                <hr>
+                <div class="amenities">
+                    <div class="title">
+                        <strong>امکانات</strong>
+                    </div>
+                    <div class="content">
+                        <div class="attribut list-item col-sm-12 col-lg-4 col-md-6 mb-4" v-for="item in amenities">
+                            <i class="fa fa-lg" v-bind:class="item.icon"></i>
+                            <span class="ms-3"> <strong>{{ item.title }}</strong> </span>
+                        </div>
+                    </div>
+                </div>
+<!--  -->
+<div class="amenities">
+    <div class="title">
+        <strong>مبالغ</strong>
+    </div>
+    <div class="content">
+        <div class="attribut mb-4 list-item col-sm-6 col-lg-3 " v-for="item in prices">
+            
+            <span class="ms-3"> {{ item.title }}  :<strong>{{  item.value }}</strong></span>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+
+    </footer>
+    <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
+
+    <script src="./node_modules/vue/dist/vue.global.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./asset/sample/data.js"></script>
+    <script src="./asset/js/app.js"></script>
+
+</body>
+
+</html>
