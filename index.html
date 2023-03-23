@@ -66,7 +66,7 @@
     <main>
         <div id="app">
             <div class="header">
-                <div class="headerImage" :style="headerImage">
+                <div class="headerImage" :style="headerImage" v-on:click="modalShow=true">
 
                 </div>
             </div>
@@ -76,10 +76,13 @@
                 <p class="small">{{ address }}</p>
                 <hr>
                 <div class="about">
-                    <p class="parageaph" style="text-align: justify;">
+                    <p :class="{parageaph:droupdone}"  style="text-align: justify;">
                         {{ body }}
-                    </p>
+                    
+                   
                 </div>
+                <button  class="btn btn-outline" v-on:click="droupdone=!droupdone">{{ droupdone?"نمایش بیشتر +" :"نمایش کمتر  -" }}</button>
+            </p>
                 <hr>
                 <div class="amenities">
                     <div class="title">
@@ -92,18 +95,24 @@
                         </div>
                     </div>
                 </div>
-<!--  -->
-<div class="amenities">
-    <div class="title">
-        <strong>مبالغ</strong>
-    </div>
-    <div class="content">
-        <div class="attribut mb-4 list-item col-sm-6 col-lg-3 " v-for="item in prices">
-            
-            <span class="ms-3"> {{ item.title }}  :<strong>{{  item.value }}</strong></span>
-        </div>
-    </div>
-</div>
+                <!--  -->
+                <div class="amenities">
+                    <div class="title">
+                        <strong>مبالغ</strong>
+                    </div>
+                    <div class="content">
+                        <div class="attribut mb-4 list-item col-sm-6 col-lg-3 " v-for="item in prices">
+                            
+                            <span class="ms-3"> {{ item.title }}  :<strong>{{  item.value }}</strong></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="modal" :class="{show:modalShow}">
+                <button v-on:click="modalShow=false" class="modal-close">&times</button>
+                <div class="modal-content">
+                    <img src="./asset/images/header.jpeg">
+                </div>
             </div>
         </div>
 
