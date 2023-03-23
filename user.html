@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="./asset/css/style.css">
+    <title>زائر سرا </title>
+</head>
+
+<body>
+    <header class="shadow">
+        <nav class="navbar navbar-expand-lg bg-white">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="./asset/images/logo.png" width="70px" alt="زائرسرا">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">خانه </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">لیست </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                محصولات
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">قالب 1</a></li>
+                                <li><a class="dropdown-item" href="#">قالب 2</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">قالب 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">درباره ما </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">تماس با ما </a>
+                        </li>
+                        <li class="nav-item mr-3">
+                            <a class="nav-link disabled">ورود و ثبت نام </a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Optional JavaScript; choose one of the two! -->
+    <main>
+        <div id="app">
+            <div class="container m-5 text-center">
+                <div class="personal">
+                    <img v-bind:src="image" class="rounded-circle" alt="">
+                    <div class="info mt-5">
+                        <h1>{{ name }}</h1>
+                        <h3>{{ lastname }}</h3>
+                    </div>
+                    <button  class="text-dark btn btn-outline-light" v-on:click="getUser"> جدید </button>
+                    </div>
+                </div>
+           
+        </div>
+
+
+    </main>
+    <footer>
+
+    </footer>
+    <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
+
+    <script src="./node_modules/vue/dist/vue.global.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>    <script src="./asset/js/user.js"></script>
+
+</body>
+
+</html>
